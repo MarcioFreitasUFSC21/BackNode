@@ -21,8 +21,9 @@ server.on('error', onError);
 server.on('listening', onListening);
 console.log('API  actual is running in port ' + port);
 
-
-/// functions space
+//******************************************************************************************* */
+///                          The functions space
+//******************************************************************************************** */
 function normalizedPorta(val){
     const port  = parseInt(val,10);
     if (isNaN(port)) {
