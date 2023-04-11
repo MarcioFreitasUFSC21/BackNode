@@ -2,23 +2,18 @@
 
 const http = require('http'); //this line is going to remove it!
 const debug = require('debug')('baknode:server');
-const express = require('express');
-const app = express();
+const app = require('../src/app'); // this line seach the app file on the src directory
+
+
+// ***************************************************************************************/
+// this function normalizedPorta normalizes the server port
+//************************************************************************************* */
 const port = normalizedPorta(process.env.PORT || '3000');
 app.set('port', port);
 
 
 const server = http.createServer(app);
-const router = express.Router();
 
-// 
-const route = router.get('/' , (req, res, next) => {
-    res.status(200).send ({
-        title: "Node Store API", 
-        version: "0.0.1"
-    });
-});
-app.use('/', route);
 
 //servr, can you listen to the oc port?
 server.listen(port);
@@ -56,6 +51,6 @@ function onError(error){
 }
 function onListening(){
     const addr = server.address();
-    const bind = typeof addr === 'string'; ? 'pipe  ' + addr : 'port  ' + addr.port;
+    const bind = typeof addr === 'string' ? 'pipe  ' + addr : 'port  ' + addr.port;
     debug('Listening om ' + bind); 
 }
