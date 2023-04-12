@@ -6,37 +6,21 @@
 //**************************************************************** */
 const express = require('express');
 const router = express.Router();
-//**************************************************************** */
-//                         the  Get/Create routine
-//***************************************************************** */
- router.get('/' , (req, res, next) => {
-    res.status(200).send ({
-        title: "Node Store API", 
-        version: "0.0.5 ok!"
-    });
-});
+const controller = require('./controllers/product-controller');
+const controller = require('./controllers/product-controller');
+/
 /***************************************************************** */
 //               the   Post/Create routine 201 ms
 //**************************************************************** */
-router.post('/' , (req, res, next) => {
-    res.status(201).send (req.body);
-});
+router.post('/' , controller);
 //******************************************************************* */
 //               the Put routine 
 //******************************************************************** */
-router.put('/:id', (req, res, next) => {
-    const id = req.params.id;
-    res.status(200).send ({
-        id: id, 
-        item: req.body
-    });
-});
+router.put('/:id', controller.put);
 //***************************************************************** */
 //             The Delete routine
 //***************************************************************** */
-router.delete('/' , (req, res, next) => {
-    res.status(200).send (req.body);
-});
+router.delete('/' , controller.delete);
 //*************************************************************** */
 //                 module exports
 //*************************************************************** */
