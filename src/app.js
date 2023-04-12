@@ -2,11 +2,11 @@
 //            Code of app.js
 //************************************************************* */
 'use strict'
-const express = require('express');
+//const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const router = express.Router();
+//const router = express.Router();
 
 //****************************************************************/
 //              the Json comunication conversion protocoll
