@@ -11,8 +11,6 @@ const router = express.Router();
 //****************************************************************** */
 const indexRoute = require('./routes/index-route');
 const productRoute = require ('./routes/product-route');
-
-
 //****************************************************************/
 //              the Json comunication conversion protocoll
 //*************************************************************** */
