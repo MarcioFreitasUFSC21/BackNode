@@ -6,13 +6,14 @@
 //**************************************************************** */
 const express = require('express');
 const router = express.Router();
-const controller = require('./controllers/product-controller');
-const controller = require('./controllers/product-controller');
-/
-/***************************************************************** */
+const controller = require('../controllers/product-controller');
+
+
+
+//***************************************************************** */
 //               the   Post/Create routine 201 ms
 //**************************************************************** */
-router.post('/' , controller);
+router.post('/', controller.post);
 //******************************************************************* */
 //               the Put routine 
 //******************************************************************** */
@@ -20,7 +21,7 @@ router.put('/:id', controller.put);
 //***************************************************************** */
 //             The Delete routine
 //***************************************************************** */
-router.delete('/' , controller.delete);
+router.delete('/', controller.delete);
 //*************************************************************** */
 //                 module exports
 //*************************************************************** */
