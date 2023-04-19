@@ -6,10 +6,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const router = express.Router();
-<<<<<<< Updated upstream
 //const config = require('config');
-=======
->>>>>>> Stashed changes
 //****************************************************************** */
 //                    Charge routes
 //****************************************************************** */
