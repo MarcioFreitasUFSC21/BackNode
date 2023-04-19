@@ -23,6 +23,7 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 console.log('API  actual is running in port ' + port);
+console.log('server online');
 
 //******************************************************************************************* */
 ///                          The functions space

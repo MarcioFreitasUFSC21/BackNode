@@ -6,7 +6,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const router = express.Router();
+const mongoose = require('mongoose');
+
 //const config = require('config');
+//****************************************************************** */
+//                   the mongose router
+//****************************************************************** */
+mongoose.connect('mongodb+srv://marciofreitasufsc21:OpxHz0P8YoLDFk7R@cluster0.ryj7r1i.mongodb.net/?retryWrites=true&w=majority');
 //****************************************************************** */
 //                    Charge routes
 //****************************************************************** */
