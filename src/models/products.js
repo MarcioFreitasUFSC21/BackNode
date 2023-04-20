@@ -13,7 +13,6 @@ const schema = new Schema({
         type: String,
         require: true,
         trim: true
-
     },
     slug: {
         type: String,
@@ -23,11 +22,27 @@ const schema = new Schema({
         unique: true,
     },
     description: {
-        
+        type: String,
+        required: true
     },
-
-
-
+    price: {
+        type: Number,
+        required: true
+    },
+    active: {
+        type: Boolean,
+        required: true,
+        default: true
+    },
+    tags: [{
+        type: String,
+        required: true
+    }],
+    image: {
+        type: String,
+        required: true,
+        trim: true
+    }
 });
 ///*********************************************************** */
 //                  Exporting a new schema
