@@ -11,7 +11,6 @@ const mongoose = require('mongoose');
 async function main () {
     try {
         await mongoose.connect("mongodb+srv://marciofreitasufsc21:OpxHz0P8YoLDFk7R@cluster0.ryj7r1i.mongodb.net/?retryWrites=true&w=majority");
-        //mongoose.conect('mongodb://localhost:27017');
         console.log("data bank connected");
     } catch (error) {
         console.log("problem connecting");
@@ -25,4 +24,4 @@ async function main () {
 module.exports = main;
 ///OpxHz0P8YoLDFk7R password to mongoDB
 //mongodb+srv://marciofreitasufsc21:<password>@cluster0.ryj7r1i.mongodb.net/?retryWrites=true&w=majoritynpm start
-//mongodb+srv://marciofreitasufsc21:<password>@cluster0.ryj7r1i.mongodb.net/?retryWrites=true&w=majoritymongodb+srv://marciofreitasufsc21:<password>@cluster0.ryj7r1i.mongodb.net/?retryWrites=true&w=majority
+//

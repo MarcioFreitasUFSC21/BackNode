@@ -13,7 +13,7 @@ const mongoose = require('mongoose');
 //                   the mongose router
 //****************************************************************** */
 mongoose.connect('mongodb+srv://marciofreitasufsc21:OpxHz0P8YoLDFk7R@cluster0.ryj7r1i.mongodb.net/?retryWrites=true&w=majority');
-//mongoose.conect('mongodb://localhost:27017');
+//mongoose.conect('mongodb://localhost:27017)
 //****************************************************************** */
 //                    Charge routes
 //****************************************************************** */
