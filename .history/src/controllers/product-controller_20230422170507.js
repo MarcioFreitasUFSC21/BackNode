@@ -4,9 +4,8 @@
 //******************************************************** */
 //  importing the product modell
 //********************************************************** */
-const mongoose = require('mongoose');
-const { schema } = require('../models/products');
-const Product = mongoose.model('Product',schema);
+
+const product = mongoose.model('Product');
 //*********************************************************** */
 exports.post = (req, res, next) => {
     res.status(201).send (req.body); };

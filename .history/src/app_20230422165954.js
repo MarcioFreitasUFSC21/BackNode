@@ -13,6 +13,7 @@ mongoose.set("strictQuery", true);
 //****************************************************************** */
 //                   the mongose router
 //****************************************************************** */
+
 async function main () {
      try {
          await mongoose.connect("mongodb+srv://marciofreitasufsc21:OpxHz0P8YoLDFk7R@cluster0.ryj7r1i.mongodb.net/?retryWrites=true&w=majority");
@@ -39,5 +40,5 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', indexRoute);
 app.use('/products', productRoute);
 //***************************************************************** */
-module.exports = app,  main;
+module.exports = app;
 //***************************************************************** */
