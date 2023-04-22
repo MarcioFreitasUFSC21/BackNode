@@ -41,5 +41,5 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', indexRoute);
 app.use('/products', productRoute);
 //***************************************************************** */
-module.exports = app;
+module.exports = app,  main;
 //***************************************************************** */

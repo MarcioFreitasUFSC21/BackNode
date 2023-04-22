@@ -6,10 +6,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const router = express.Router();
-
 const mongoose = require('mongoose');
 mongoose.set("strictQuery", true);
-
 
 //const config = require('config');
 //****************************************************************** */
@@ -41,5 +39,5 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', indexRoute);
 app.use('/products', productRoute);
 //***************************************************************** */
-module.exports = app;
+module.exports = app,  main;
 //***************************************************************** */

@@ -14,9 +14,9 @@ exports.post = (req, res, next) => {
         res.status(201).send({msg: 'product created with sucessully'})
         
     }).catch((err) => {
-        res.status(404).send ({message: 'failure product creation', data: err.message});
+        console.log("failure product creation");
     });
-};
+    res.status(201).send (req.body); };
 //*********************************************************** */
 exports.put = (req, res, next) => {
     const id = req.params.id;

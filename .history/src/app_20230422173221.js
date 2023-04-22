@@ -10,7 +10,6 @@ const router = express.Router();
 const mongoose = require('mongoose');
 mongoose.set("strictQuery", true);
 
-
 //const config = require('config');
 //****************************************************************** */
 //                   the mongose router
@@ -41,5 +40,5 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', indexRoute);
 app.use('/products', productRoute);
 //***************************************************************** */
-module.exports = app;
+module.exports = app,  main;
 //***************************************************************** */

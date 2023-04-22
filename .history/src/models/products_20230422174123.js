@@ -20,7 +20,7 @@ const schema = new Schema({
     },
     slug: {
         type: String,
-        require: [true, "o slug is obrigatory"],
+        require: ['true,
         trim: true,
         index: true,
         unique: true,

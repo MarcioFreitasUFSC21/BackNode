@@ -9,14 +9,9 @@ const { schema } = require('../models/products');
 const Product = mongoose.model('Product',schema);
 //*********************************************************** */
 exports.post = (req, res, next) => {
-    const  product = new Product(req.body);
-    product.save().then((x) => {
-        res.status(201).send({msg: 'product created with sucessully'})
-        
-    }).catch((err) => {
-        res.status(404).send ({message: 'failure product creation', data: err.message});
-    });
-};
+    var product = new Product(req.body);
+    product.save();
+    res.status(201).send (req.body); };
 //*********************************************************** */
 exports.put = (req, res, next) => {
     const id = req.params.id;

@@ -6,10 +6,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const router = express.Router();
-
 const mongoose = require('mongoose');
 mongoose.set("strictQuery", true);
-
 
 //const config = require('config');
 //****************************************************************** */
@@ -17,7 +15,7 @@ mongoose.set("strictQuery", true);
 //****************************************************************** */
 async function main () {
      try {
-         await mongoose.connect("mongodb+srv://marciofreitasufsc21:OpxHz0P8YoLDFk7R@cluster0.ryj7r1i.mongodb.net/?retryWrites=true&w=majority");
+         await mongoose.connect("mongodb+srv://marciofreitasufsc21:OpxHz0P8YoLDFk7R@cluster0.ryj7r1i.mongodb.net//?retryWrites=true&w=majority");
          //mongoose.conect('mongodb://localhost:27017');
          console.log("data bank connected");
      } catch (error) {
@@ -41,5 +39,5 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use('/', indexRoute);
 app.use('/products', productRoute);
 //***************************************************************** */
-module.exports = app;
+module.exports = app,  main;
 //***************************************************************** */

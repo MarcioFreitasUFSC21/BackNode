@@ -11,12 +11,12 @@ const Product = mongoose.model('Product',schema);
 exports.post = (req, res, next) => {
     const  product = new Product(req.body);
     product.save().then((x) => {
-        res.status(201).send({msg: 'product created with sucessully'})
+        res
         
     }).catch((err) => {
-        res.status(404).send ({message: 'failure product creation', data: err.message});
+        console.log(err);
     });
-};
+    res.status(201).send (req.body); };
 //*********************************************************** */
 exports.put = (req, res, next) => {
     const id = req.params.id;
